@@ -14,9 +14,20 @@ export async function GET(req: Request) {
 
 async function getGoldPrice() : Promise<number> {
     try {
-    const res = await fetch(`https://www.goldapi.io/api/XAU/USD`);
-    const data = await res.json();
-    return data[0].price_gram_10k;
+      let header = new Headers();
+      header.append("x-access-token", process.env.GOLD_API_KEY!);
+      header.append("Content-Type", "application/json");
+
+      let requestOptions = {
+        method: 'GET',
+        headers: header,
+        };
+
+      const res = await fetch(`https://www.goldapi.io/api/XAU/USD`, requestOptions);
+      const data = await res.json();
+
+      return data.price_gram_10k;
+
   } catch {
     return 60;
   }
