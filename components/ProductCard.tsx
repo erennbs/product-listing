@@ -16,6 +16,10 @@ export default function ProductCard({ product }: ProductCardProps) {
         <img src={product.images[selectedImage]} alt="" />
         <h2 className="text-lg font-semibold">{product.name}</h2>
         <p className="text-gray-700">${product.price.toFixed(2)}</p>
+        <ColorPicker
+          colors={product.images}
+          onSelect={(img: string) => setSelectedImage(img)}
+        />
         <p>Score: {product.popularityScore}</p>
       </div>
     </div>
