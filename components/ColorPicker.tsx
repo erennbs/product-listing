@@ -14,7 +14,7 @@ export default function ColorPicker({ selected, colors, onSelect }: ColorPickerP
   }
   
   return (
-    <div className="flex gap-2">
+    <div className="flex gap-2 ml-0.5">
       {Object.keys(colors).map((color, i) => (
         <button
           key={i}
