@@ -24,8 +24,8 @@ export default function ProductList({products}: ProductListProps) {
           className="mySwiper"
       >
         {products.map((p, i) => (
-            <SwiperSlide>
-              <ProductCard key={i} product={p} />
+            <SwiperSlide key={i}>
+              <ProductCard product={p} />
             </SwiperSlide>
           ))}
       </Swiper>

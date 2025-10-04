@@ -14,11 +14,11 @@ export async function GET(req: Request) {
 
 async function getGoldPrice() : Promise<number> {
     try {
-      let header = new Headers();
+      const header = new Headers();
       header.append("x-access-token", process.env.GOLD_API_KEY!);
       header.append("Content-Type", "application/json");
 
-      let requestOptions = {
+      const requestOptions = {
         method: 'GET',
         headers: header,
         };
