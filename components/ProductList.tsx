@@ -15,7 +15,7 @@ export default function ProductList({products}: ProductListProps) {
   return (
     <div className='mt-5 flex px-10'>
       <Swiper slidesPerView={"auto"}
-          spaceBetween={30}
+          spaceBetween={50}
           navigation= {true}
           pagination={{
             clickable: true,
