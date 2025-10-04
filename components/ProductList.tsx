@@ -13,9 +13,10 @@ interface ProductListProps {
 
 export default function ProductList({products}: ProductListProps) {
   return (
-    <div className='mt-5 flex h-[440px]'>
+    <div className='mt-5 flex px-10'>
       <Swiper slidesPerView={"auto"}
           spaceBetween={30}
+          navigation= {true}
           pagination={{
             clickable: true,
           }}

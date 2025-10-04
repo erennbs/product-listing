@@ -15,7 +15,7 @@ export default function Home() {
 
   return (
     <main className="flex flex-col content-around w-full h-auto">
-      <h2 className="text-2xl mx-auto">Product List</h2>
+      <h2 className="text-[45px] mx-auto mt-40 mb-10 font-header">Product List</h2>
       <ProductList products={products} />
     </main>
   );
